@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState } from "react";
-
+import { SWATHCES } from "@/constants";
+import {ColorSwatch, Group } from '@mantine/core';
 
 export default function Home() {
 const canvasRef = useRef<HTMLCanvasElement>(null);
