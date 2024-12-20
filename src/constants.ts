@@ -1,4 +1,4 @@
-const SWATHCES = [
+const SWATCHES = [
     "#ffffff", 
     "#ее3333", 
     "#e64980",
@@ -12,4 +12,4 @@ const SWATHCES = [
     "#fd7e14",
 ]
 
-export {SWATHCES};
+export {SWATCHES};
