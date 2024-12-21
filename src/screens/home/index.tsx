@@ -140,6 +140,7 @@ return (
             onMouseDown={startDrawing}
             onMouseOut={stopDrawing}
             onMouseUp={stopDrawing}
-            onMouseMove={draw} /></>
-)
+            onMouseMove={draw} />
+        </>
+);
 };
