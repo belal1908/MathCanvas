@@ -7,3 +7,7 @@ PORT = '8900'
 ENV = 'dev'
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    print("GEMINI_API_KEY loaded successfully!")
+else:
+    print("GEMINI_API_KEY not found.")

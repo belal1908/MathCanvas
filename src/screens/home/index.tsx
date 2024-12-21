@@ -48,6 +48,7 @@ export default function Home() {
     }, [latexExpression]);
 
     useEffect(() => {
+        console.log(result);
         if (result) {
             renderLatexToCanvas(result.expression, result.answer);
         }
@@ -109,6 +110,8 @@ export default function Home() {
                 }    
             });
             const resp = await response.data;
+            console.log(resp);
+
             resp.data.forEach((data: Response) => {
                 if (data.assign === true) {
                     setDictOfVars({
@@ -144,7 +147,7 @@ export default function Home() {
                     expression: data.expr,
                     answer: data.result
                 });
-            }, 1000);
+            }, 200);
         });
     }
 
@@ -236,7 +239,7 @@ return (
             defaultPosition={latexPosition}
             onStop={(e, data) => setLatexPosition({ x: data.x, y: data.y })}
         >
-            <div className="absolute p-2 text-white rounded shadow-md">
+            <div className="absolute text-white">
                 <div className="latex-content">{latex}</div>
             </div>
         </Draggable>
