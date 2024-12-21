@@ -192,7 +192,7 @@ export default function Home() {
                         expression: data.expr,
                         answer: data.result
                     });
-                }, 1000);
+                }, 100);
             });
         }
     };
